@@ -12,11 +12,7 @@ for (let i = 0; i < 10; i++) {
     .then(response => {
       const email = response.data.response;
 
-      const li = document.createElement("li");
-      li.textContent = email;
-      emailList.appendChild(li);
+      HTMLDataListElement.innerHTML += `<li>${email}</li>`;
     })
-    .catch(error => {
-      console.error("Errore nel caricamento dell'email:", error);
-    });
+    
 }
