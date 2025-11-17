@@ -12,7 +12,7 @@ for (let i = 0; i < 10; i++) {
     .then(response => {
       const email = response.data.response;
 
-      HTMLDataListElement.innerHTML += `<li>${email}</li>`;
+      listElem.innerHTML += `<li>${email}</li>`;
     })
     
 }
