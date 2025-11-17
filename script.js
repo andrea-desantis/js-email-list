@@ -12,7 +12,21 @@ for (let i = 0; i < 10; i++) {
     .then(response => {
       const email = response.data.response;
 
-      listElem.innerHTML += `<li>${email}</li>`;
-    })
+      
+
+
+      emailsArray.push(email);
+      if(emailsArray.length === 10){
+        printEmails(emailsArray);
+      }
+      
+    });
     
+}
+
+function printEmails(array){
+  const listElem = document.querySelector("ul");
+  array.forEach(element => {
+    listElem.innerHTML += `<li>${email}</li>`;
+  });
 }
